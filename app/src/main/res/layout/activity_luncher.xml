@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<qyh.androidprojecthelper.launcher.LauncherView
-    android:id="@+id/load_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-</qyh.androidprojecthelper.launcher.LauncherView>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent">
+    <qyh.androidprojecthelper.launcher.LauncherView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </qyh.androidprojecthelper.launcher.LauncherView>
+    <Button
+        android:id="@+id/bu_intoapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="进入应用"
+        />
+</RelativeLayout>

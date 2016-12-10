@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.zhy.autolayout.AutoLayoutActivity;
+
 import butterknife.ButterKnife;
 
 
@@ -13,10 +15,10 @@ import butterknife.ButterKnife;
  *            2.BaseActivity类对Activity一些基本的生命周期进行控制 --->  范围包含网络,事件(绑定)订阅,取消,DB,以及涉及到的广播等
  *            3.此类可以进行接入友盟页面统计,以及BUG统计等!
  *            4.根据项目需求 待扩展。。。
- *
+ *      AutoLayoutActivity  屏幕适配
  *  Created by qyh on 2016/12/6.
  **/
-public abstract class BaseActivity<M extends  BaseModel , P extends BasePresenter> extends AppCompatActivity {
+public abstract class BaseActivity<M extends  BaseModel , P extends BasePresenter> extends AutoLayoutActivity {
 
 //    定义Presenter
     protected  P mPresenter;

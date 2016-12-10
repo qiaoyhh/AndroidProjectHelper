@@ -8,18 +8,18 @@
     <FrameLayout
         android:id="@+id/fl_tab_container"
         android:layout_width="match_parent"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="110px"
         android:layout_height="match_parent"/>
 
     <qyh.androidprojecthelper.view.bottombar.BottomBar
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="110px"
         android:layout_gravity="bottom"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="110px"
         android:layout_height="wrap_content"/>
 </FrameLayout>

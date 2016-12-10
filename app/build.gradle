@@ -25,4 +25,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'me.yokeyword:fragmentation:0.8.4'
+    //屏幕适配
+    compile 'com.zhy:autolayout:1.4.5'
 }
