@@ -1,17 +1,24 @@
 package qyh.androidprojecthelper.base;
 
-import android.app.Application;
+
+import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
 /**
- * 描述：
+ * 描述：MultiDexApplication防止方法数过多
  * Created by qyh on 2016/12/6.
  */
-public class BaseApplication extends Application {
+public class BaseApplication extends MultiDexApplication {
+    private static BaseApplication baseApplication;
     @Override
     public void onCreate() {
         super.onCreate();
+        baseApplication = this;
         AutoLayoutConifg.getInstance().useDeviceSize();
+    }
+    public static Context getAppContext() {
+        return baseApplication;
     }
 }
