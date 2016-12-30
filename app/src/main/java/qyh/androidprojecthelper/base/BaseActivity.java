@@ -5,9 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
+
+import com.zhy.autolayout.AutoLayoutActivity;
+
+import butterknife.ButterKnife;
 
 import qyh.androidprojecthelper.baserx.RxManager;
 import qyh.androidprojecthelper.utils.TUtil;
@@ -51,7 +54,7 @@ import qyh.androidprojecthelper.view.LoadingDialog;
 //    public void initView() {
 //    }
 //}
-public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel> extends AppCompatActivity {
+public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel> extends AutoLayoutActivity {
     public T mPresenter;
     public E mModel;
     public Context mContext;
@@ -63,7 +66,7 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         mRxManager=new RxManager();
         doBeforeSetcontentView();
         setContentView(getLayoutId());
-        //ButterKnife.bind(this);
+        ButterKnife.bind(this);
         mContext = this;
         mPresenter = TUtil.getT(this, 0);
         mModel= TUtil.getT(this,1);

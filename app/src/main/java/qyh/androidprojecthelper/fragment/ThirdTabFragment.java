@@ -1,26 +1,29 @@
 package qyh.androidprojecthelper.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
-import qyh.androidprojecthelper.base.BaseMainFragment;
+import qyh.androidprojecthelper.R;
+import qyh.androidprojecthelper.base.BaseFragment;
+
 
 /**
  * 描述：
  * Created by qyh on 2016/12/10.
  */
-public class ThirdTabFragment extends BaseMainFragment {
-    public static ThirdTabFragment newInstance() {
+public class ThirdTabFragment extends BaseFragment {
 
-        Bundle args = new Bundle();
-
-        ThirdTabFragment fragment = new ThirdTabFragment();
-        fragment.setArguments(args);
-        return fragment;
+    @Override
+    protected int getLayoutResource() {
+        return R.layout.fragment_firtst;
     }
 
     @Override
-    public void onLazyInitView(@Nullable Bundle savedInstanceState) {
-        super.onLazyInitView(savedInstanceState);
+    public void initPresenter() {
+
+    }
+
+    @Override
+    protected void initView() {
+
     }
 }

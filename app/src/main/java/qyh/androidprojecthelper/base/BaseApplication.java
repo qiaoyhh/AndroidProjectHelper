@@ -4,6 +4,7 @@ package qyh.androidprojecthelper.base;
 import android.content.Context;
 import android.support.multidex.MultiDexApplication;
 
+import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
 /**
@@ -17,6 +18,7 @@ public class BaseApplication extends MultiDexApplication {
         super.onCreate();
         baseApplication = this;
         AutoLayoutConifg.getInstance().useDeviceSize();
+        ZXingLibrary.initDisplayOpinion(this);
     }
     public static Context getAppContext() {
         return baseApplication;

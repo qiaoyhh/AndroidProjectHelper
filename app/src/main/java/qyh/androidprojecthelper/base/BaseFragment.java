@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
-import me.yokeyword.fragmentation.SupportFragment;
+import butterknife.ButterKnife;
 import qyh.androidprojecthelper.baserx.RxManager;
 import qyh.androidprojecthelper.utils.TUtil;
 import qyh.androidprojecthelper.utils.ToastUitl;
@@ -53,16 +53,11 @@ import qyh.androidprojecthelper.view.LoadingDialog;
 //    public void initView() {
 //    }
 //}
-public abstract  class BaseFragment<T extends BasePresenter, E extends BaseModel> extends SupportFragment {
+public abstract  class BaseFragment<T extends BasePresenter, E extends BaseModel> extends Fragment {
     protected View rootView;
     public T mPresenter;
     public E mModel;
     public RxManager mRxManager;
-
-    // 再点一次退出程序时间设置
-    private static final long WAIT_TIME = 2000L;
-    private long TOUCH_TIME = 0;
-
 
     @Nullable
     @Override
@@ -70,7 +65,7 @@ public abstract  class BaseFragment<T extends BasePresenter, E extends BaseModel
         if (rootView == null)
             rootView = inflater.inflate(getLayoutResource(), container, false);
         mRxManager=new RxManager();
-       // ButterKnife.bind(this, rootView);
+        ButterKnife.bind(this, rootView);
         mPresenter = TUtil.getT(this, 0);
         mModel= TUtil.getT(this,1);
         if(mPresenter!=null){
@@ -201,22 +196,6 @@ public abstract  class BaseFragment<T extends BasePresenter, E extends BaseModel
         if (mPresenter != null)
             mPresenter.onDestroy();
         mRxManager.clear();
-    }
-
-    /**
-     * 处理回退事件
-     *
-     * @return
-     */
-    @Override
-    public boolean onBackPressedSupport() {
-        if (System.currentTimeMillis() - TOUCH_TIME < WAIT_TIME) {
-            _mActivity.finish();
-        } else {
-            TOUCH_TIME = System.currentTimeMillis();
-            Toast.makeText(_mActivity, "再按一次退出", Toast.LENGTH_SHORT).show();
-        }
-        return true;
     }
 
 }
