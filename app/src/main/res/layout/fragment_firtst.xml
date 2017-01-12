@@ -3,10 +3,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </android.support.v7.widget.RecyclerView>
+    <include
+        layout="@layout/appbar"
+        />
+    <qyh.androidprojecthelper.view.refresh.RefreshLayout
+      android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+    </qyh.androidprojecthelper.view.refresh.RefreshLayout>
 </LinearLayout>

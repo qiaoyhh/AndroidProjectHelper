@@ -17,6 +17,7 @@ public class BaseApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         baseApplication = this;
+        //屏幕适配
         AutoLayoutConifg.getInstance().useDeviceSize();
         ZXingLibrary.initDisplayOpinion(this);
     }

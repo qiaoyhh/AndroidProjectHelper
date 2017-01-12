@@ -1,4 +1,6 @@
 package qyh.androidprojecthelper.presenter;
+import com.flyco.tablayout.widget.MsgView;
+
 import java.util.List;
 
 import qyh.androidprojecthelper.R;
@@ -30,7 +32,7 @@ public class FirstPresenter extends FirstContract.Presenter{
 
             @Override
             protected void _onError(String message) {
-
+                mView.showErrorTip(message);
             }
         }));
     }

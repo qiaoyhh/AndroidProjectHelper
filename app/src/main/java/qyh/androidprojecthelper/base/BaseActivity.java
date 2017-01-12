@@ -19,6 +19,7 @@ import qyh.androidprojecthelper.view.LoadingDialog;
 
 /**
  * 基类
+ * AutoLayoutActivity 屏幕适配  详细用法请看https://github.com/hongyangAndroid/AndroidAutoLayout
  * Created by qyh on 2016/12/7.
  */
 
