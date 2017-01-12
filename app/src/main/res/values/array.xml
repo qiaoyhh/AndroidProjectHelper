@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="second_fragment_name">
+        <item>栏目1</item>
+        <item>栏目2</item>
+        <item>栏目3</item>
+        <item>栏目4</item>
+    </string-array>
+    <string-array name="second_fragment_id">
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+    </string-array>
+</resources>
