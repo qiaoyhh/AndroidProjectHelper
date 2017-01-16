@@ -15,9 +15,10 @@ import qyh.androidprojecthelper.base.BaseFragment;
 import qyh.androidprojecthelper.base.BaseFragmentAdapter;
 import qyh.androidprojecthelper.bean.SecondChannelTabBean;
 import qyh.androidprojecthelper.db.SecondChannelManager;
+import qyh.androidprojecthelper.view.CustomViewPager;
 
 /**
- * 描述：
+ * 描述：Viewpager切换示例，详细功能不写了
  * Created by qyh on 2016/12/10.
  */
 public class SecondTabFragment extends BaseFragment {
@@ -25,7 +26,7 @@ public class SecondTabFragment extends BaseFragment {
     @BindView(R.id.tabs)
     public TabLayout tabs;
     @BindView(R.id.view_pager)
-    public ViewPager viewPager;
+    public CustomViewPager viewPager;
     private BaseFragmentAdapter baseFragmentAdapter;
 
     @Override
@@ -43,15 +44,17 @@ public class SecondTabFragment extends BaseFragment {
         ArrayList<String> tabName=new ArrayList<>();
         ArrayList<Fragment> fragments=new ArrayList<>();
         List<SecondChannelTabBean> tabDatas = SecondChannelManager.loadTab();
-        System.out.println("数据大小===="+tabDatas.size());
         for(int i=0;i<tabDatas.size();i++){
             tabName.add(tabDatas.get(i).getName());
             fragments.add(createListFragments(tabDatas.get(i)));
         }
+
         baseFragmentAdapter = new BaseFragmentAdapter(getChildFragmentManager(), fragments, tabName);
         viewPager.setAdapter(baseFragmentAdapter);
         tabs.setupWithViewPager(viewPager);
+        viewPager.setCurrentItem(1);
     }
+
     private SecondListFragment createListFragments(SecondChannelTabBean data) {
         SecondListFragment fragment = new SecondListFragment();
         Bundle bundle = new Bundle();
