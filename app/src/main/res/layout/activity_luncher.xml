@@ -14,6 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="进入应用"
+        android:text="跳过"
         />
 </RelativeLayout>
