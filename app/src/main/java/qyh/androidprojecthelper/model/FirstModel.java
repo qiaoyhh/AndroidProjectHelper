@@ -13,6 +13,7 @@ import rx.functions.Func1;
  * 描述：
  * Created by qyh on 2016/12/28.
  */
+
 public class FirstModel implements FirstContract.Model {
     @Override
     public Observable<List<FirstBean>> getListData(int size, int page) {

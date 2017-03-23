@@ -1,5 +1,4 @@
 package qyh.androidprojecthelper.presenter;
-import com.flyco.tablayout.widget.MsgView;
 
 import java.util.List;
 
@@ -14,9 +13,10 @@ import qyh.androidprojecthelper.contract.FirstContract;
  */
 public class FirstPresenter extends FirstContract.Presenter{
 
+
     @Override
     public void getFirstListDataRequest(int size, int page) {
-        mRxManage.add(mModel.getListData(size,page).subscribe(new RxSubscriber<List<FirstBean>>(mContext,true) {
+        mRxManage.add(mModel.getListData(size,page).subscribe(new RxSubscriber<List<FirstBean>>(mContext,false) {
 
             @Override
             public void onStart() {

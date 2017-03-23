@@ -6,9 +6,9 @@ import qyh.androidprojecthelper.baserx.RxManager;
 
 
 /**
- * des:基类presenter
- * Created by xsf
- * on 2016.07.11:55
+ * 描述:基类presenter
+ * Created by qyh on 2016/12/6.
+ *
  */
 public abstract class BasePresenter<T,E>{
     public Context mContext;

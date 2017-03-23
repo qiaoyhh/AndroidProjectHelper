@@ -20,6 +20,7 @@ import qyh.androidprojecthelper.bean.FirstBean;
 import qyh.androidprojecthelper.contract.FirstContract;
 import qyh.androidprojecthelper.model.FirstModel;
 import qyh.androidprojecthelper.presenter.FirstPresenter;
+import qyh.androidprojecthelper.view.LoadingDialog;
 import qyh.androidprojecthelper.view.refresh.NormalRefreshViewHolder;
 import qyh.androidprojecthelper.view.refresh.RefreshLayout;
 
@@ -91,12 +92,12 @@ public class FirstTabFragment extends BaseFragment<FirstPresenter,FirstModel> im
     // 我使用的LoadingDialog的方法，加载成功自动消失，所以不用处理进度消失等事件
     @Override
     public void showLoading(String title) {
-
+        LoadingDialog.showDialogForLoading(getActivity());
     }
 
     @Override
     public void stopLoading() {
-
+        LoadingDialog.cancelDialogForLoading();
     }
     //加载失败提示，根据需要自己处理
     @Override

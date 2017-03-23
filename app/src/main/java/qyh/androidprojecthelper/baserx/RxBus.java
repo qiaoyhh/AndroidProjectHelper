@@ -17,7 +17,7 @@ import rx.subjects.Subject;
 
 /**
  * 用RxJava实现的EventBus
- * Created by qyh on 2016/12/6.
+ * Created by qyh on 2016/8/6.
  */
 public class RxBus {
     private static RxBus instance;
@@ -96,7 +96,6 @@ public class RxBus {
             subjects.remove((Subject<?, ?>) observable);
             if (isEmpty(subjects)) {
                 subjectMapper.remove(tag);
-               // LogUtils.logd("unregister"+ tag + "  size:" + subjects.size());
             }
         }
         return getInstance();
