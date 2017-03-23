@@ -13,23 +13,20 @@ import qyh.androidprojecthelper.contract.FirstContract;
  */
 public class FirstPresenter extends FirstContract.Presenter{
 
-
     @Override
     public void getFirstListDataRequest(int size, int page) {
-        mRxManage.add(mModel.getListData(size,page).subscribe(new RxSubscriber<List<FirstBean>>(mContext,false) {
 
+        mRxManage.add(mModel.getListData(size,page).subscribe(new RxSubscriber<List<FirstBean>>(mContext,false) {
             @Override
             public void onStart() {
                 super.onStart();
                 mView.showLoading(mContext.getString(R.string.loading));
             }
-
             @Override
             protected void _onNext(List<FirstBean> firstBeen) {
                 mView.showListData(firstBeen);
                 mView.stopLoading();
             }
-
             @Override
             protected void _onError(String message) {
                 mView.showErrorTip(message);

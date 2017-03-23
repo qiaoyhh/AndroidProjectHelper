@@ -11,8 +11,7 @@ import rx.Subscriber;
 
 /**
  * des:订阅封装
- * Created by xsf
- * on 2016.09.10:16
+  Created by qyh on 2016/12/28.
  */
 
 /********************使用例子********************/

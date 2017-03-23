@@ -24,4 +24,5 @@ public interface ApiService {
             @Path("size") int size,
             @Path("page") int page);
 
+
 }

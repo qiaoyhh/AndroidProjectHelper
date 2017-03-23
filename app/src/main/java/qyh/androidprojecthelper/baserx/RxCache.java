@@ -15,8 +15,7 @@ import rx.schedulers.Schedulers;
 
 /**
  * des:处理服务器数据的缓存
- * Created by xsf
- * on 2016.09.11:01
+ Created by qyh on 2016/12/28.
  */
 //################################使用例子#############################
 /*
