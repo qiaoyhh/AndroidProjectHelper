@@ -23,7 +23,7 @@ public class FirstTabFragment extends BaseFragment<FirstPresenter,FirstModel>
         mPresenter.setVM(this,mModel);
     }
 
-** 2.Presenter中代码，观察者模式，model中请求数据后，会回调到presenterz中**
+**2.Presenter中代码，观察者模式，model中请求数据后，会回调到presenterz中**
 ````java
  @Override
     public void getFirstListDataRequest(int size, int page) {
@@ -46,7 +46,7 @@ public class FirstTabFragment extends BaseFragment<FirstPresenter,FirstModel>
         }));
     }
 
-  ** 3.Model中代码，主要是就是请求网络，将结果发送到presenterz中**
+  **3.Model中代码，主要是就是请求网络，将结果发送到presenterz中**
   ````java
    @Override
       public Observable<List<FirstBean>> getListData(int size, int page) {
