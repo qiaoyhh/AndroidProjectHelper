@@ -62,7 +62,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initPresenter() {
-
     }
 
     @Override
@@ -78,6 +77,7 @@ public class MainActivity extends BaseActivity {
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
         }
+
         tabLayout.setTabData(mTabEntities);
         //点击监听
         tabLayout.setOnTabSelectListener(new OnTabSelectListener() {
@@ -136,4 +136,13 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //1 显示tabLayout的角标 显示未读数
+        tabLayout.showMsg(1,88);
+        tabLayout.setMsgMargin(3,0,10);
+        //隐藏消息
+        //tabLayout.hideMsg(1);
+    }
 }

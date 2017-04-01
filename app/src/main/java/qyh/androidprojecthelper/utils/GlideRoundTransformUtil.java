@@ -11,7 +11,6 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
 /**
  * description:glide转换圆角图片
- * Created by xsf
  * on 2016.04.15:17
  */
 public class GlideRoundTransformUtil extends BitmapTransformation {
